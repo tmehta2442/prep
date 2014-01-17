@@ -29,3 +29,6 @@ print array.square
 puts
 array.add_squares
 puts
+
+# oh yeah, can always do something like array.each {|x| print x **= 2 } , but that 
+# only prints out the array... map is what we want!
