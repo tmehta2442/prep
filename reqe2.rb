@@ -19,6 +19,7 @@ end
 dog = Dog.new
 dog.speak
 # dog.dream						# will give an error
-dog.send :dream   #the .send seems to be an odd feature. 
+dog.send :dream   #the .send seems to be an odd feature of ruby
+									#I would rather go about changing the code
 
 
