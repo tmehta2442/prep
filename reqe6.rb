@@ -16,33 +16,38 @@ array = [ ['a', 1], ['b', 2], ['c', '3' ], ['a', 2] ]
 # puts hash
 
 # 2.
-def make_to_hash(tuple_array)
-	hash = {}
-	tuple_array.each do |k, v|
-		hash[k] = v
-	end
-	hash
-end
+# def make_to_hash(tuple_array)
+# 	hash = {}
+# 	tuple_array.each do |k, v|
+# 		hash[k] = v
+# 		# if hash[k].empty?
+# 		# 	hash[k] << v
+# 		# else
+# 		# 	hash[k] = v
+# 		# end
+# 	end
+# 	hash
+# end
 
-print make_to_hash(array)
+# print make_to_hash(array)
 
 
-# array = [ ['a', 1], ['b', 2], ['c', '3' ] ]
+array = [ ['a', 1, 1], ['b', 2], ['c', '3' ], ['a', 2] ]
 #   a = [
 #     ["A", "a", 1],
 #     ["A", "b", 2],
 #     ["B", "a", 1]
 #   ]
 
-# def a_to_h(x)
-#   h={}
-#   x.map do |nested|
-#     key = nested.shift
-#     h[key] ||= {}
-#     h[key].merge!({ nested.shift => nested.shift })
-#   end
-#   h
-# end
+def a_to_h(x)
+  h={}
+  x.map do |nested|
+    key = nested.shift
+    h[key] ||= {}
+    h[key].merge!({ nested.shift => nested.shift })
+  end
+  h
+end
 
-# print a_to_h(array)
+print a_to_h(array)
 
